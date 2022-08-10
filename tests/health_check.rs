@@ -1,5 +1,5 @@
 use pursuance::{
-    configuration::{self, get_configuration, DatabaseSettings},
+    configuration::{get_configuration, DatabaseSettings},
     startup::run,
 };
 use sqlx::{Connection, Executor, PgConnection, PgPool};
@@ -52,11 +52,6 @@ pub async fn configure_database(config: &DatabaseSettings) -> PgPool {
 async fn subscribe_returns_a_200_for_valid_form_data() {
     let app = spawn_app().await;
 
-    let configuration = get_configuration().expect("Failed to read configuration");
-    let connection_string = configuration.database.connection_string();
-    let mut connection = PgConnection::connect(&connection_string)
-        .await
-        .expect("Failed to connect to Postgres.");
     let client = reqwest::Client::new();
 
     let body = "name=le%20guin&email=ursula_le_guin%40gmail.com";
