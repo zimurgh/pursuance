@@ -18,7 +18,7 @@ services:
 
 databases:
   - engine: PG
-    name: pursuance
+    name: pursuance_db
     num_nodes: 1
     size: db-s-dev-database
     version: "12"
