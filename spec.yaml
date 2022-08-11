@@ -1,7 +1,7 @@
 name: pursuance
 region: nyc1
 services:
-  - name: pursuance
+  - name: pursuance-web
     dockerfile_path: Dockerfile
     source_dir: .
     github:
