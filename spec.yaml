@@ -24,10 +24,10 @@ services:
         value: ${pursuance-db.PASSWORD}
       - key: APP_DATABASE__HOST
         scope: RUN_TIME
-        value: ${pursuance-db.HOST}
-      - key: APP_DATABASE__KEY
+        value: ${pursuance-db.HOSTNAME}
+      - key: APP_DATABASE__PORT
         scope: RUN_TIME
-        value: ${pursuance-db.KEY}
+        value: ${pursuance-db.PORT}
       - key: APP_DATABASE__DATABASE_NAME
         scope: RUN_TIME
         value: ${pursuance-db.DATABASE}
